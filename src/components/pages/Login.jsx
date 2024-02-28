@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useReducer, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthData } from "../../auth/AuthWrapper";
 
@@ -9,8 +9,17 @@ const Login = () => {
     (formData, newItem) => {
       return { ...formData, ...newItem };
     },
-    { userName: "", password: "" }
+    { userName: "", password: "" },
+    () => {
+      const localData = localStorage.getItem("formData");
+      return localData ? JSON.parse(localData) : { userName: "", password: "" };
+    }
   );
+
+  useEffect(() => {
+    localStorage.setItem("formData", JSON.stringify(formData));
+  }, [formData]);
+
   const [errorMessage, setErrorMessage] = useState(null);
 
   const doLogin = async () => {
