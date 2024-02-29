@@ -15,6 +15,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -70,3 +71,28 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+/* className="bg-[#081729] h-screen" */
+body {
+  background: #081729;
+  background-image: radial-gradient(#1A2F41 0,1px, transparent 10%);
+  background-size: 10px 10px;  
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "sf-pro-regular";
+  src: local("AirbnbCerealLight"),
+    url("./fonts/SF-Pro-Text-Regular.otf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Bebas Neue',
+    'Poppins', sans-serif, 'SF-Pro-Text-Medium', 'SF-Pro-Text-Regular', BebasNeueRegular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

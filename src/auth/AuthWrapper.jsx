@@ -1,6 +1,6 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import {
-    RenderNavigation,
+  RenderNavigation,
   RenderView,
 } from "../components/structure/RenderNavigation";
 
@@ -9,9 +9,15 @@ export const AuthData = () => useContext(AuthContext);
 
 const AuthWrapper = () => {
   const [user, setUser] = useState({ name: "", isAuthenticated: false });
+  useEffect(() => {
+    const localData = localStorage.getItem("formData");
+    if (localData) {
+      login(JSON.parse(localData).userName, JSON.parse(localData).password);
+    }
+  }, []);
 
   const login = (userName, password) => {
-    // Make a call to the authentication API to check the username
+    // Make a call to the authentication API to check the username and password
 
     return new Promise((resolve, reject) => {
       if (password === "1234") {
@@ -24,6 +30,10 @@ const AuthWrapper = () => {
   };
   const logout = () => {
     setUser({ ...user, isAuthenticated: false });
+    localStorage.setItem(
+      "formData",
+      JSON.stringify({ userName: "", password: "" })
+    );
   };
 
   return (

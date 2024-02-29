@@ -1,8 +1,8 @@
 const Home = () => {
   return (
     <div className="page">
-      <h2>Home page</h2>
-      <p>
+      <h2 className="font-bold text-[60px] text-white text-center">Home page</h2>
+      <p className="xl:px-44 text-white text-[19px] text-justify mt-10 mx-auto w-11/12">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
         mollitia, molestiae quas vel sint commodi repudiandae consequuntur
         voluptatum laborum numquam blanditiis harum quisquam eius sed odit

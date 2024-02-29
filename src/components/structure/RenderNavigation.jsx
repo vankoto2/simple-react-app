@@ -7,8 +7,9 @@ export const RenderNavigation = () => {
 
   const MenuItem = ({ r }) => {
     return (
-      <div className="menuItem">
-        <Link to={r.path}>{r.name}</Link>
+          
+      <div className="">
+        <Link className="text-[#A0AEB6] hover:text-white focus:text-white text-16px col-span-2" to={r.path}>{r.name}</Link>
       </div>
     );
   };
@@ -24,13 +25,13 @@ export const RenderNavigation = () => {
 
       {user.isAuthenticated ? (
         <div className="menuItem">
-          <Link to={"#"} onClick={logout}>
+          <Link  className="text-[#A0AEB6] hover:text-white focus:text-white text-16px col-span-2"  to={"#"} onClick={logout}>
             Log out
           </Link>
         </div>
       ) : (
         <div className="menuItem">
-          <Link to={"login"}>Log in</Link>
+          <Link  className="text-[#A0AEB6] hover:text-white focus:text-white text-16px col-span-2"  to={"login"}>Log in</Link>
         </div>
       )}
     </div>

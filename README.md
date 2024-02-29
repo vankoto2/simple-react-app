@@ -1,4 +1,8 @@
 # React + Vite
+To run npm run dev
+
+To login password is: 1234
+The username is dynamic.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 Private Routes with React Router V6
