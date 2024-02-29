@@ -59,7 +59,7 @@ const Private = () => {
   return (
     <div className="mx-auto">
       <div
-        className="font-bold text-[60px] text-white text-center"
+        className="font-bold text-[60px] text-white text-center pt-10"
         id="news"
       >
         NEWS

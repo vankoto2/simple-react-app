@@ -33,7 +33,7 @@ const Login = () => {
 
   return (
     <div>
-      <h2 className="font-bold text-[60px] text-white text-center">
+      <h2 className="font-bold text-[60px] text-white text-center pt-10">
         Login page
       </h2>
       <div className="mx-auto laptop:w-1/2 pt-5">

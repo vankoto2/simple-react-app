@@ -1,4 +1,4 @@
-import About from "../pages/About";
+import Contacts from "../pages/Contacts";
 import Account from "../pages/Account";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
@@ -13,9 +13,9 @@ export const navigation = [
     isPrivate: false,
   },
   {
-    path: "/about",
-    name: "About",
-    element: <About />,
+    path: "/contacts",
+    name: "Contacts",
+    element: <Contacts />,
     isMenu: true,
     isPrivate: false,
   },
